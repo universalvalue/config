@@ -36,6 +36,7 @@ filetype plugin indent on    " required
 " Solarized color scheme
 set t_Co=16
 syntax enable
+set background=dark
 colorscheme solarized
 "~/.vimrc ends here
 " set space as leader
