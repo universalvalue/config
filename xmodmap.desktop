@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=/usr/bin/xmodmap /home/max/.Xmodmap
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[de_DE]=xmodmap
+Name=xmodmap
+Comment[de_DE]=startet xmodmap um tastatur umzulegen
+Comment=startet xmodmap um tastatur umzulegen
