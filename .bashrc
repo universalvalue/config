@@ -17,4 +17,7 @@ fi
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+
 SSH_ASKPASS=
+
+PS1='${debian_chroot:+($debian_chroot)}\[\033[31m\]\u\[\033[32m\]@\h:\[\033[34m\]\w\$\[\033[0m\]'
