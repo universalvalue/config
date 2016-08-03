@@ -1,5 +1,14 @@
 "~/.vimrc (config file for vim)
+
+" set highlighting during search
 set incsearch
+
+"Set hightlighting ALL search results
+set hlsearch
+
+" Set case sensitive search to Smart
+set smartcase
+
 set ruler
 set number
 syntax on
@@ -9,7 +18,13 @@ syntax on
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
+" remap esc to stop highlighting after search
+
+nnoremap <Esc> :noh<CR><Esc>
+" FIx delay after Esc
+set timeout timeoutlen=0 ttimeoutlen=10
+
+" set the runset timeout timeoutlen=0 ttimeoutlen=10ime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
