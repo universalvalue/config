@@ -6,6 +6,8 @@ set incsearch
 "Set hightlighting ALL search results
 set hlsearch
 
+" ignore case in search
+set ignorecase
 " Set case sensitive search to Smart
 set smartcase
 
@@ -13,16 +15,27 @@ set ruler
 set number
 syntax on
 
+" Bindings to close and write file
+
 " VUNDLE
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" remap esc to stop highlighting after search
+" Comment out single lines with Control-E (uses commentary plugin)
+nmap <C-e> gcc
 
+" remap esc to stop highlighting after search
 nnoremap <Esc> :noh<CR><Esc>
-" FIx delay after Esc
-set timeout timeoutlen=0 ttimeoutlen=10
+
+" Fix delay after Esc
+" set noesckeys
+set timeout timeoutlen=300 ttimeoutlen=10
+
+" Gnuplot comment string
+augroup gnuplot
+	autocmd FileType gp set commentstring=#\ %s
+augroup END
 
 " set the runset timeout timeoutlen=0 ttimeoutlen=10ime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -33,6 +46,7 @@ call vundle#begin()
 " PLUGINS HERE
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-commentary'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
