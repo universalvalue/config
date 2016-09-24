@@ -28,6 +28,11 @@ nmap <C-e> gcc
 " remap esc to stop highlighting after search
 nnoremap <Esc> :noh<CR><Esc>
 
+" remap :w to <SPACE>-W 
+nnoremap <Leader>w :w<CR>
+" remap :q to <SPACE>-Q
+nnoremap <Leader>q :q<CR>
+
 " Fix delay after Esc
 " set noesckeys
 set timeout timeoutlen=300 ttimeoutlen=10
