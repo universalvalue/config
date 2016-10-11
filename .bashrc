@@ -21,3 +21,6 @@ fi
 SSH_ASKPASS=
 
 PS1='${debian_chroot:+($debian_chroot)}\[\033[31m\]\u\[\033[32m\]@\h:\[\033[34m\]\w\$\[\033[0m\]'
+
+# Disable annoying "which manual page do you want?" prompt - JUST GIVE ME ONE, HOLY SHIT!
+function man { /usr/bin/man "$@" | /usr/bin/less ;} 
