@@ -15,7 +15,6 @@ set ruler
 set number
 syntax on
 
-" Bindings to close and write file
 
 " VUNDLE
 
@@ -37,6 +36,9 @@ set timeout timeoutlen=300 ttimeoutlen=10
 augroup gnuplot
 	autocmd FileType gp set commentstring=#\ %s
 augroup END
+
+" Set highlighting for plain tex identical to latex highlighing
+let g:tex_flavor = "latex"
 
 " set the runset timeout timeoutlen=0 ttimeoutlen=10ime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -70,6 +72,7 @@ set background=dark
 colorscheme solarized
 " set space as leader
 let mapleader = "\<Space>"
+" Bindings to close and write file
 " remap :w to <SPACE>-W 
 nnoremap <Leader>w :w<CR>
 " remap :q to <SPACE>-Q
