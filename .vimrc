@@ -60,17 +60,27 @@ let g:airline_section_errors = ''
 let g:airline_section_warning = '%{strftime("%c")}'
 
 " Show path of current file relative to working directory
-let g:airline_section_b = '%f'
-let g:airline_section_c = ''
+let g:airline_section_b = ''
+let g:airline_section_c = '%f'
+
+" uncomment only if poweline fonts are installed!!
+let g:airline_powerline_fonts = 1
+"
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+endif
+" eventually helps with misplaces seperators
+let g:airline#extensions#whitespace#mixed_indent_algo = 1
+" end of powerlinefont section
 
 " By default shows file encoding which is too cluttered for me
 let g:airline_section_x = ''
-let g:airline_section_y = ''
-"let g:airline_section_z = ''
+let g:airline_section_y = '%l/%L : %p%%'
+let g:airline_section_z = ''
 
 " disable separators
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
+" let g:airline_left_sep = ''
+" let g:airline_right_sep = ''
 
 
 "----
