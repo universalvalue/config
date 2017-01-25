@@ -69,6 +69,9 @@ let g:airline_powerline_fonts = 1
 " Inconsolata)
 " end of powerlinefont section
 
+" deactivate word count in tex or txt files
+let g:airline#extensions#wordcount#enabled = 0
+
 " By default shows file encoding which is too cluttered for me
 let g:airline_section_x = ''
 let g:airline_section_y = '%l/%L : %p%%'
