@@ -21,6 +21,8 @@ Plugin 'tpope/vim-commentary'
 " -> Custom Status line
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+" -> Easy File finder (better than :e ... )
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -84,7 +86,6 @@ let g:airline_section_z = ''
 
 "----
 
-
 " Comment out single lines with Control-E (uses commentary plugin)
 nmap <C-e> gcc
 
@@ -125,7 +126,6 @@ syntax enable
 set background=dark
 colorscheme solarized
 
-" Bindings to close and write file
 " set space as leader
 let mapleader = "\<Space>"
 " Bindings to close and write file
@@ -140,4 +140,17 @@ nnoremap <Leader>h :bp<CR>
 nnoremap <Leader>l :bn<CR>
 "allow opening of new buffer without saving changes
 set hidden
+
+"---- Ctrl-P
+"Ctrl-P config
+
+" Ctrl-P: show dotfiles
+let g:ctrlp_show_hidden = 1
+
+" Map <leader-p> to ctrlp plugin
+nnoremap <silent> <Leader>p :CtrlP .<CR>
+nnoremap <silent> <Leader>b :CtrlPBuffer<CR>
+
+"--- Ctrl-P
+
 "~/.vimrc ends here
