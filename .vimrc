@@ -151,6 +151,8 @@ let g:ctrlp_show_hidden = 1
 nnoremap <silent> <Leader>p :CtrlP .<CR>
 nnoremap <silent> <Leader>b :CtrlPBuffer<CR>
 
+" Ignore pdf etc. in file list
+set wildignore+=*.zip,*.rar,*.gz,*.png,*.gif,*.jpg,*.pdf
 "--- Ctrl-P
 
 "~/.vimrc ends here
